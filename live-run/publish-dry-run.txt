@@ -1,0 +1,24 @@
+$ python -m tt_poster publish --dry-run
+[dry run] draft 4efe4528: POST /v2/post/publish/video/init/
+{
+  "post_info": {
+    "title": "Buying a standing desk for your home office? Check these three things first: height range, stability and warranty. Ours adjust from 62 cm to 127 cm, dual-motor frames carry up to 120 kg, and frames come with a 5 year warranty. What would you check first? #standingdesk #homeoffice #wfhsetup",
+    "privacy_level": "SELF_ONLY",
+    "disable_duet": true,
+    "disable_comment": false,
+    "disable_stitch": true,
+    "video_cover_timestamp_ms": 1000,
+    "brand_content_toggle": false,
+    "brand_organic_toggle": false,
+    "is_aigc": false
+  },
+  "source_info": {
+    "source": "FILE_UPLOAD",
+    "video_size": 27546166,
+    "chunk_size": 10485760,
+    "total_chunk_count": 2
+  }
+}
+[dry run]   PUT chunk 1/2: Content-Type video/mp4, Content-Range bytes 0-10485759/27546166
+[dry run]   PUT chunk 2/2: Content-Type video/mp4, Content-Range bytes 10485760-27546165/27546166
+4efe4528: dry_run 2 chunk(s), 27546166 bytes

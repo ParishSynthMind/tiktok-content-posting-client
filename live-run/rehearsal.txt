@@ -1,0 +1,10 @@
+$ python scripts/rehearsal_mock_server.py live-run/rehearsal-queue
+Local fake TikTok API on http://127.0.0.1:50138 (rehearsal, not TikTok)
+Posting to @rehearsal_account (Rehearsal) as SELF_ONLY
+  status: PROCESSING_UPLOAD
+  status: PUBLISH_COMPLETE
+4efe4528: published publish_id v_pub_file~v2-1.rehearsal
+server got PUT bytes 0-10485759/27546166 (video/mp4, 10485760 bytes)
+server got PUT bytes 10485760-27546165/27546166 (video/mp4, 17060406 bytes)
+original sha256 686001637441801e..., rebuilt on server 686001637441801e..., match: True
+exit 0

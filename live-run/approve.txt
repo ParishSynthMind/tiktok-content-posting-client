@@ -1,0 +1,11 @@
+$ python -m tt_poster approve 4efe4528 --by Parish   # no privacy chosen
+ERROR: choose a privacy level (--privacy); TikTok requires the user to pick it, no default
+exit 2
+$ python -m tt_poster approve 4efe4528 --by Parish --privacy PUBLIC_TO_EVERYONE --agree-music-terms
+Approved 4efe4528 as a direct post, privacy PUBLIC_TO_EVERYONE.
+By posting, you agree to TikTok's Music Usage Confirmation.
+$ python -m tt_poster publish --dry-run   # app not audited by TikTok yet
+4efe4528: blocked this app is not audited by TikTok yet, so it can only post SELF_ONLY; approve again with --privacy SELF_ONLY, or set TIKTOK_APP_AUDITED=true once TikTok has approved the audit
+$ python -m tt_poster approve 4efe4528 --by Parish --privacy SELF_ONLY --agree-music-terms --allow-comment
+Approved 4efe4528 as a direct post, privacy SELF_ONLY.
+By posting, you agree to TikTok's Music Usage Confirmation.

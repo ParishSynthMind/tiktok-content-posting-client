@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+PORTFOLIO-LISTING.md
+queue/
+.tiktok_token.json
+*.tmp
+*.mp4
+*.mov
+*.webm
+live-run/rehearsal-queue/

@@ -1,0 +1,6 @@
+$ python -m tt_poster draft briefs/standing-desk.md
+Caption 4efe4528 (290 characters, 1 attempt(s)): pending
+Buying a standing desk for your home office? Check these three things first: height range, stability and warranty. Ours adjust from 62 cm to 127 cm, dual-motor frames carry up to 120 kg, and frames come with a 5 year warranty. What would you check first? #standingdesk #homeoffice #wfhsetup
+All checks passed.
+Claude tokens: 796 in, 134 out
+Review page: live-run/queue/review.html
