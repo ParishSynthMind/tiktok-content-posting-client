@@ -85,8 +85,7 @@ Posting API. Nothing leaves your computer until you say so.</p>
 password), review the two permissions it asks for and choose whether to allow them.</li>
 <li><b>Write a brief.</b> Topic, audience, tone and the facts the caption may use, plus the video file you want to share.</li>
 <li><b>AI drafts the caption.</b> The draft is checked automatically and goes into the approval queue.</li>
-<li><b>Review and approve.</b> The approval screen shows the TikTok account it will go to (your display name and
-avatar), the video, the caption, and the settings. You edit the caption if you like and approve or reject it.</li>
+<li><b>Review and approve.</b> The approval screen shows the TikTok account it will go to (your TikTok name), the video, the caption, and the settings. You edit the caption if you like and approve or reject it.</li>
 <li><b>Upload to your TikTok inbox.</b> The approved video is uploaded as a draft. The app shows its progress until
 TikTok confirms it has arrived. You open TikTok, make any final edits and post it yourself.</li>
 </ol>
@@ -98,7 +97,7 @@ TikTok confirms it has arrived. You open TikTok, make any final edits and post i
 <h2>What it uses from TikTok</h2>
 <table>
 <tr><th>TikTok product</th><th>Permission</th><th>Why the app needs it</th></tr>
-<tr><td>Login Kit</td><td><code>user.info.basic</code></td><td>To sign you in and show which account the video will go to (display name and avatar).</td></tr>
+<tr><td>Login Kit</td><td><code>user.info.basic</code></td><td>To sign you in and show which account the video will go to (your TikTok name).</td></tr>
 <tr><td>Content Posting API</td><td><code>video.upload</code></td><td>To upload the video you approved to your TikTok inbox as a draft, and to check its upload status.</td></tr>
 </table>
 <p>That is all. It does not read your followers, messages, likes, comments, other videos or analytics, and it
@@ -130,7 +129,7 @@ never likes, follows, comments or messages on your behalf.</p>
 <h2>Frequently asked questions</h2>
 <details><summary>Does it post anything without asking me?</summary><p>No. Every caption waits in the approval queue, and even after you approve it the video arrives in your TikTok inbox as a draft that you post yourself.</p></details>
 <details><summary>Does the app see my TikTok password?</summary><p>No. You sign in on TikTok's own page. The app only receives a sign-in token, which stays on your computer.</p></details>
-<details><summary>Which TikTok permissions does it ask for?</summary><p>Two: <code>user.info.basic</code> (your display name and avatar) and <code>video.upload</code> (to send your approved video to your inbox as a draft).</p></details>
+<details><summary>Which TikTok permissions does it ask for?</summary><p>Two: <code>user.info.basic</code> (your basic profile, used to show your TikTok name) and <code>video.upload</code> (to send your approved video to your inbox as a draft).</p></details>
 <details><summary>How do I disconnect it?</summary><p>Run <code>python -m tt_poster revoke</code>, or in the TikTok app go to Settings and privacy, Security, Manage app permissions, and remove Content Posting Client. Then delete the local files.</p></details>
 <details><summary>Do I have to use the AI captions?</summary><p>No. You can write or paste your own caption and still use the approval queue and the upload.</p></details>
 <details><summary>What does it cost?</summary><p>The app is free and open source. If you use AI drafting you need your own Anthropic API key, billed by Anthropic.</p></details>
