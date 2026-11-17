@@ -156,7 +156,7 @@ CI runs lint and tests on every push with no secrets.
 
 - **Submitted 6 Nov 2026** (Login Kit `user.info.basic` + Content Posting API `video.upload`, upload-to-inbox only).
 - **Rejected 17 Nov 2026** for two fields: the app icon did not match the website favicon, and the website was a bare landing page.
-- **Fixed 17 Nov 2026:** the website ([parishsynthmind.github.io/tiktok-content-posting-client](https://parishsynthmind.github.io/tiktok-content-posting-client/)) is now a full product site, and its favicon and header logo are generated from the exact icon on the app. Resubmission: pending.
+- **Fixed 17 Nov 2026:** the website ([parishsynthmind.github.io/tiktok-content-posting-client](https://parishsynthmind.github.io/tiktok-content-posting-client/)) is now a full product site, and its favicon and header logo are generated from the exact icon on the app. **Resubmitted 17 Nov 2026, in review.**
 
 ## Not proven yet
 
