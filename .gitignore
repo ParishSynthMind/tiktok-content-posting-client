@@ -12,3 +12,4 @@ queue/
 *.mov
 *.webm
 live-run/rehearsal-queue/
+live-run/REVIEW-*.md

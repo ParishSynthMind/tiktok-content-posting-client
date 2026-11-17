@@ -1,21 +1,56 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Privacy policy</title></head>
-<body style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px;margin:60px auto;padding:0 20px;line-height:1.5">
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy policy: Content Posting Client</title></head>
+<body style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:60px auto;padding:0 20px;line-height:1.55">
+<p><a href="./">Content Posting Client</a> &middot; <a href="terms.html">Terms of service</a></p>
 <h1>Privacy policy</h1>
-<p>Last updated 5 November 2026.</p>
-<p>TikTok Content Posting Client runs only on the computer of the creator who installs it. It is used by
-that creator to post their own videos to their own TikTok account.</p>
+<p>Last updated 17 November 2026.</p>
+<p>This policy explains what Content Posting Client ("the app") does with your information when you connect
+your TikTok account to it.</p>
+
+<h2>What we access</h2>
 <ul>
-<li><b>What it accesses:</b> with your permission, your basic TikTok profile (username and display name) and
-the ability to upload and post videos you choose (scopes user.info.basic, video.upload, video.publish).</li>
-<li><b>Where data is kept:</b> access tokens are stored on your own computer (macOS Keychain or a private
-file). Captions and the approval queue are stored in local files. Nothing is sent to any server run by the
-developer.</li>
-<li><b>Who it is shared with:</b> your videos and captions are sent only to TikTok, and only after you approve
-them. Caption drafts are written by Anthropic's Claude API from a brief you write; the brief and draft are
-sent to Anthropic for that purpose only.</li>
-<li><b>Deleting your data:</b> run <code>python -m tt_poster revoke</code>, or remove the app in TikTok under
-Settings and privacy, Security, Manage app permissions, then delete the local files.</li>
+<li><b>Basic TikTok profile</b> (scope <code>user.info.basic</code>): your open ID, display name and avatar, used
+to show which account a video will be sent to.</li>
+<li><b>Video upload</b> (scope <code>video.upload</code>): used only to upload a video you have approved to your
+TikTok inbox as a draft, and to check its upload status.</li>
+<li><b>Information you provide:</b> the brief you write, the video file you choose and the caption you approve.</li>
 </ul>
-<p>Questions: open an issue on the project's GitHub page.</p>
+<p>We do not access your followers, messages, likes, comments, other videos or analytics.</p>
+
+<h2>How we use it</h2>
+<p>Only to draft a caption, show it to you for approval, and send the approved video and caption to TikTok.
+We do not sell your data, use it for advertising, or build profiles.</p>
+
+<h2>Where it is stored and for how long</h2>
+<ul>
+<li>Access and refresh tokens are stored on your own computer, in the macOS Keychain or a private file only
+your user can read. They are kept until you revoke access or delete them.</li>
+<li>Briefs, captions and the approval queue are local files on your computer. A posting log keeps only an ID,
+a fingerprint, the TikTok publish ID, the status and the settings you chose, with no caption text and no tokens.</li>
+<li>No data is sent to, or stored on, any server run by the developer.</li>
+</ul>
+
+<h2>Who it is shared with</h2>
+<ul>
+<li><b>TikTok</b>, to sign you in and to receive the video and caption you approved.</li>
+<li><b>Anthropic</b> (Claude API), which receives your brief to draft the caption. It does not receive your
+TikTok tokens or profile. You can skip this and write the caption yourself.</li>
+</ul>
+
+<h2>Your choices and deleting your data</h2>
+<ul>
+<li>Revoke access at any time with <code>python -m tt_poster revoke</code>, or in the TikTok app under Settings and
+privacy, Security, Manage app permissions.</li>
+<li>Delete the local files and Keychain items to remove everything the app stored.</li>
+</ul>
+
+<h2>Children</h2>
+<p>The app is not intended for anyone under 18.</p>
+
+<h2>Changes</h2>
+<p>Changes to this policy are published on this page with a new date.</p>
+
+<h2>Contact</h2>
+<p>Questions or requests: open an issue at
+<a href="https://github.com/ParishSynthMind/tiktok-content-posting-client/issues">github.com/ParishSynthMind/tiktok-content-posting-client/issues</a>.</p>
 </body></html>

@@ -1,10 +1,56 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>TikTok Content Posting Client</title></head>
-<body style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px;margin:60px auto;padding:0 20px;line-height:1.5">
-<h1>TikTok Content Posting Client</h1>
-<p>A small open-source tool a creator runs on their own computer to post their own videos to their own
-TikTok account through TikTok's official Content Posting API. Every caption is reviewed and approved by
-the creator before anything is posted.</p>
-<p><a href="privacy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of service</a> &middot;
-<a href="https://github.com/ParishSynthMind/tiktok-content-posting-client">Source code</a></p>
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Content Posting Client: AI captions, human approval, official TikTok posting</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:820px;margin:0 auto;padding:0 20px 60px;line-height:1.55;color:#161823}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #e3e3e4;margin-bottom:28px}
+header nav a{margin-left:18px;color:#161823}
+h1{font-size:2rem;margin:.2em 0}h2{margin-top:2em}
+.lead{font-size:1.15rem;color:#444}
+ol li,ul li{margin:.35em 0}
+img{max-width:100%;border:1px solid #e3e3e4;border-radius:8px}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid #e3e3e4;font-size:.95rem}
+code{background:#f1f1f2;padding:1px 5px;border-radius:4px}
+</style></head>
+<body>
+<header><span style="display:flex;align-items:center;gap:10px"><img src="app-icon.png" alt="" width="40" height="40" style="border:0;border-radius:8px"><strong>Content Posting Client</strong></span>
+<nav><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="https://github.com/ParishSynthMind/tiktok-content-posting-client">Source code</a></nav></header>
+
+<h1>Write it with AI. Approve it yourself. Post it the official way.</h1>
+<p class="lead">Content Posting Client is a free, open-source tool for creators. AI drafts a caption and hashtags
+for your video from a short brief, you check and approve it, and the video is sent to your own TikTok account
+through TikTok's official Login Kit and Content Posting API. Nothing is ever posted without your approval.</p>
+
+<h2>How it works</h2>
+<ol>
+<li><b>Sign in with TikTok.</b> You connect your account on TikTok's own sign-in page and choose what to allow.
+You can remove access at any time.</li>
+<li><b>Write a brief.</b> Topic, audience, tone and the facts the caption may use, plus the video file.</li>
+<li><b>AI drafts the caption.</b> It is checked automatically: TikTok's length limit, no invented figures,
+no links or @mentions, no spammy hashtags.</li>
+<li><b>You review and approve.</b> You see the account it will go to, the video, the caption, and you choose
+the privacy level and interaction settings yourself. Nothing is pre-selected.</li>
+<li><b>Sent to TikTok.</b> The video is uploaded to your TikTok inbox as a draft. You open TikTok, make any
+final edits and post it from the TikTok app.</li>
+</ol>
+
+<p><img src="review-queue.png" alt="The approval screen: video, caption, account and the settings the creator chooses"></p>
+
+<h2>What it uses from TikTok</h2>
+<ul>
+<li><b>Login Kit</b> (scope <code>user.info.basic</code>): to sign you in and show which account the video
+will go to (display name and avatar).</li>
+<li><b>Content Posting API</b> (scope <code>video.upload</code>): to upload the video you approved to your
+TikTok inbox as a draft, then show its progress until it arrives.</li>
+</ul>
+<p>It does not read your followers, messages or other videos, and it never likes, follows, comments or
+messages on your behalf.</p>
+
+<h2>Your data</h2>
+<p>Your sign-in tokens, briefs and captions stay on your own computer. Videos and captions go only to TikTok,
+and only after you approve them. Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+<footer><a href="privacy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of service</a> &middot;
+<a href="https://github.com/ParishSynthMind/tiktok-content-posting-client/issues">Contact and support</a><br>
+Content Posting Client is an independent project and is not made, endorsed or sponsored by TikTok.</footer>
 </body></html>
