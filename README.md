@@ -152,9 +152,15 @@ CI runs lint and tests on every push with no secrets.
 ![Dry run](media/terminal-dry-run.png)
 ![Rehearsal against a local fake API](media/terminal-rehearsal.png)
 
-## Not proven yet (needs the TikTok developer app)
+## TikTok app review status
 
-- Nothing has been posted to TikTok. Login Kit, creator_info, init, the upload and the status calls have only run against mocks and the local fake, both built from the docs.
+- **Submitted 6 Nov 2026** (Login Kit `user.info.basic` + Content Posting API `video.upload`, upload-to-inbox only).
+- **Rejected 17 Nov 2026** for two fields: the app icon did not match the website favicon, and the website was a bare landing page.
+- **Fixed 17 Nov 2026:** the website ([parishsynthmind.github.io/tiktok-content-posting-client](https://parishsynthmind.github.io/tiktok-content-posting-client/)) is now a full product site, and its favicon and header logo are generated from the exact icon on the app. Resubmission: pending.
+
+## Not proven yet
+
+- Proven on a real TikTok account in the sandbox (5 Nov 2026): Login Kit sign-in, `whoami`, and an approved caption uploaded in inbox mode (arrived as a draft in the TikTok inbox). Direct post was refused by TikTok, as expected for an unaudited app (`unaudited_client_can_only_post_to_private_accounts`).
 - TikTok's docs contradict themselves in places, so the first live run settles these:
   - the token lifetimes in the example (24 h / 1 year) against the text (2 h / 180 days). The tool reads `expires_in` and `refresh_expires_in` rather than assuming either.
   - the upload host (`open-upload` against `upload.us`). The tool always uses the `upload_url` it is given.
