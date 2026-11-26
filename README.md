@@ -8,6 +8,8 @@ Claude writes a TikTok caption and hashtags from a short brief. The caption is c
 - chunked file upload
 - status polling until TikTok finishes processing
 
+**Status (26 Nov 2026):** tested live on a TikTok sandbox account (sign-in, account lookup, one approved caption uploaded to the TikTok inbox as a draft). Public posting is NOT proven: TikTok refuses direct posts from an unaudited app, and the app review (resubmitted 17 Nov 2026) is still waiting on TikTok's decision.
+
 ![The approval queue with an approved caption, its video and the post settings the approver chose](media/review-queue.png)
 
 *A real run on 2026-11-05: Claude wrote the caption from `briefs/standing-desk.md`, using only the brief's facts.*
@@ -161,8 +163,8 @@ CI runs lint and tests on every push with no secrets.
 ## Not proven yet
 
 - Proven on a real TikTok account in the sandbox (5 Nov 2026): Login Kit sign-in, `whoami`, and an approved caption uploaded in inbox mode (arrived as a draft in the TikTok inbox). Direct post was refused by TikTok, as expected for an unaudited app (`unaudited_client_can_only_post_to_private_accounts`).
-- TikTok's docs contradict themselves in places, so the first live run settles these:
-  - the token lifetimes in the example (24 h / 1 year) against the text (2 h / 180 days). The tool reads `expires_in` and `refresh_expires_in` rather than assuming either.
+- TikTok's docs contradict themselves in places; what the live sandbox run showed:
+  - the token lifetimes: the docs say 24 h / 1 year in one place and 2 h / 180 days in another; the live sign-in returned 24 h / 365 days. The tool reads `expires_in` and `refresh_expires_in` rather than assuming either.
   - the upload host (`open-upload` against `upload.us`). The tool always uses the `upload_url` it is given.
 - Whether inbox mode is allowed for an unaudited app on a public account.
 - The app review and Content Posting audit themselves. TikTok decides those.
